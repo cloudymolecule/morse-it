@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/Morse.css'
 
 function Morse() {
     return (
