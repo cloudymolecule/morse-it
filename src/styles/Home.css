@@ -1,0 +1,11 @@
+.home-container {
+    margin: 0 5em 0 5em
+}
+
+.home-title {
+    background: rgb(0,24,255);
+    background: linear-gradient(90deg, rgba(0,24,255,0) 16%, rgba(0,24,255,1) 32%, rgba(206,209,0,1) 49%, rgba(0,93,255,1) 67%, rgba(0,93,255,0) 85%);
+    font-size: 3em;
+    color: white;
+    text-align: center;
+}

@@ -3,8 +3,8 @@ import '../styles/Home.css'
 
 function Home() {
     return (
-        <div>
-            Home
+        <div className='home-container'>
+            <div className='home-title'>WELCOME TO MORSE-IT</div>
         </div>
     )
 }
