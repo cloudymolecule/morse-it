@@ -1,5 +1,6 @@
 .home-container {
-    margin: 0 5em 0 5em
+    margin: 0 5em 0 5em;
+    text-align: center;
 }
 
 .home-title {
@@ -7,5 +8,12 @@
     background: linear-gradient(90deg, rgba(0,24,255,0) 16%, rgba(0,24,255,1) 32%, rgba(206,209,0,1) 49%, rgba(0,93,255,1) 67%, rgba(0,93,255,0) 85%);
     font-size: 3em;
     color: white;
-    text-align: center;
+}
+
+.home-description {
+    margin: 1em 7em 1em 7em;
+    font-size: 2em;
+    color: rgba(0,24,255,1);
+    background: rgb(247,255,0);
+    background: linear-gradient(90deg, rgba(247,255,0,0) 16%, rgba(251,255,0,1) 49%, rgba(247,255,0,0) 85%);
 }
