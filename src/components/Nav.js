@@ -29,6 +29,7 @@ function Nav() {
                         </div>
                         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                             <li className='nav-item'>
+                                <Link onClick={closeMobileMenu} className='nav-link' to='/morse'>MORSE</Link>
                             </li>
                             <li className='nav-item'>
                             </li>
