@@ -16,14 +16,15 @@ class Morse extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
-
+        console.log('submit')
     }
 
     render() {
         return (
             <form onSubmit={this.handleSubmit} className='morse-form'>
-                <h2>Type Something</h2>
-
+                <label>Type Something</label>
+                <input onChange={this.handleChange}/>
+                <button type='submit'>Morse It!</button>
             </form>
         )
     }
