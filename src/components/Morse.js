@@ -16,11 +16,11 @@ class Morse extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
-        console.log('submit')
+        this.convertToMorse(this.state.input)
     }
 
-    handleClick = e => {
-        console.log('clicked')
+    convertToMorse = string => {
+        console.log(string)
     }
 
     render() {
