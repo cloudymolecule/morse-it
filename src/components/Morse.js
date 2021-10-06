@@ -19,13 +19,20 @@ class Morse extends Component {
         console.log('submit')
     }
 
+    handleClick = e => {
+        console.log('clicked')
+    }
+
     render() {
         return (
-            <form onSubmit={this.handleSubmit} className='morse-form'>
-                <label>Type Something</label>
-                <input onChange={this.handleChange}/>
-                <button type='submit'>Morse It!</button>
-            </form>
+            <div className='morse-container'>
+                <form onSubmit={this.handleSubmit} className='morse-form'>
+                    <label>Type Something</label>
+                    <input name='input' onChange={this.handleChange}/>
+                    <button type='submit'>Morse It!</button>
+                </form>
+                <h1></h1>
+            </div>
         )
     }
 }
