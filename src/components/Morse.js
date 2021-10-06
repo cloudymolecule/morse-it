@@ -1,6 +1,6 @@
 import '../styles/Morse.css'
 import React, { Component } from 'react'
-import { FaMortarPestle } from 'react-icons/fa'
+import { EnglishMorse } from '../constants/EnglishMorse'
 
 class Morse extends Component {
     
@@ -16,11 +16,19 @@ class Morse extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
-        this.convertToMorse(this.state.input)
+        let translated = this.convertToMorse(this.state.input)
     }
 
     convertToMorse = string => {
-        console.log(string)
+        let convertedChars = []
+        string.split('').map(e => {
+            convertedChars.push(this.convertCharacter(e))
+        })
+        return convertedChars
+    }
+
+    convertCharacter = char => {
+        return char
     }
 
     render() {
