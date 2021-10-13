@@ -11,11 +11,11 @@ class Morse extends Component {
     }
     
     handleChange = e => {
-        let translated = this.convertToMorse(this.state.input)
+        let translated = this.convertToMorse(e.target.value)
         this.setState({
-          [e.target.name] : e.target.value,
-          audio: true,
-          result: translated
+            input: e.target.value,
+            result: translated,
+            audio: e.target.value ? true : false
         })
     }
 
@@ -48,7 +48,7 @@ class Morse extends Component {
     }
 
     displayAudio = () => {
-        return <button className='morse-audio-button'>Hello!</button>
+        return <button className='morse-audio-button'>Audio</button>
     }
 
     render() {
@@ -57,7 +57,7 @@ class Morse extends Component {
                 <form onSubmit={this.handleSubmit} className='morse-form'>
                     <h3 className='morse-label'>Type Something</h3>
                     <div className='morse-input-container'>
-                        <input className='morse-input' name='input' onChange={this.handleChange} maxLength='50'/>
+                        <input className='morse-input' name='input' onChange={this.handleChange} autoComplete='off' maxLength='50' value={this.state.input}/>
                     </div>
                     <button className='morse-button' type='submit'>Clear</button>
                     <h3 className='morse-result-label'>Result</h3>
