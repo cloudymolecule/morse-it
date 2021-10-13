@@ -1,0 +1,14 @@
+.morse-container {
+    text-align: center;
+}
+
+.morse-label {
+    font-size: 2em;
+}
+
+.morse-input {
+    border-radius: 25px;
+    width: 400px;
+    height: 30px;
+    text-align: center;
+}
