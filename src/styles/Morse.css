@@ -19,7 +19,7 @@
     text-align: center;
 }
 
-.morse-button {
+.morse-button, .morse-audio-button {
     margin-bottom: 20px;
     background-color: #0d00ff;
     color: white;
