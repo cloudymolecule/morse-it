@@ -5,7 +5,8 @@ import { EnglishMorse } from '../constants/EnglishMorse'
 class Morse extends Component {
     
     state = {
-        input: ''
+        input: '',
+        result: ''
     }
     
     handleChange = e => {
@@ -17,18 +18,27 @@ class Morse extends Component {
     handleSubmit = e => {
         e.preventDefault()
         let translated = this.convertToMorse(this.state.input)
+        this.setState({
+            result: translated.join(' ')
+        })
     }
 
     convertToMorse = string => {
         let convertedChars = []
         string.split('').map(e => {
-            convertedChars.push(this.convertCharacter(e))
+            convertedChars.push(this.convertCharacter(e)) 
         })
         return convertedChars
     }
 
     convertCharacter = char => {
-        return char
+        let converted = ''
+        EnglishMorse.map(e => {
+            if (e.letter === char.toLowerCase()) {
+                converted = e.morse
+            }
+        })
+        return converted
     }
 
     render() {
@@ -41,7 +51,7 @@ class Morse extends Component {
                     </div>
                     <button className='morse-button' type='submit'>Morse It!</button>
                     <h3 className='morse-result-label'>Result</h3>
-                    <div className='morse-result-text'></div>
+                    <div className='morse-result-text'>{this.state.result}</div>
                 </form>
                 <h1></h1>
             </div>

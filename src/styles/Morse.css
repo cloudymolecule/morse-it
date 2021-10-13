@@ -21,8 +21,7 @@
 
 .morse-button {
     margin-bottom: 20px;
-    background-color: #0d00ff; /* Green */
-    border: none;
+    background-color: #0d00ff;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -36,5 +35,5 @@
 }
 
 .morse-result-text {
-    
+    font-size: 2em;
 }
