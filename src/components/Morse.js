@@ -6,7 +6,8 @@ class Morse extends Component {
     
     state = {
         input: '',
-        result: ''
+        result: '',
+        audio: false
     }
     
     handleChange = e => {
@@ -25,8 +26,9 @@ class Morse extends Component {
 
     convertToMorse = string => {
         let convertedChars = []
+        // console.log(string.split(/(\s+)/))
         string.split('').map(e => {
-            convertedChars.push(this.convertCharacter(e)) 
+            return convertedChars.push(this.convertCharacter(e)) 
         })
         return convertedChars
     }
@@ -37,8 +39,13 @@ class Morse extends Component {
             if (e.letter === char.toLowerCase()) {
                 converted = e.morse
             }
+            return e
         })
         return converted
+    }
+
+    displayAudio = () => {
+        return <button className='morse-audio-button'>Hello!</button>
     }
 
     render() {
@@ -52,8 +59,8 @@ class Morse extends Component {
                     <button className='morse-button' type='submit'>Morse It!</button>
                     <h3 className='morse-result-label'>Result</h3>
                     <div className='morse-result-text'>{this.state.result}</div>
+                    <div className='morse-audio'>{this.state.audio ? this.displayAudio() : ''}</div>
                 </form>
-                <h1></h1>
             </div>
         )
     }
