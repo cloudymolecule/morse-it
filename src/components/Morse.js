@@ -35,9 +35,13 @@ class Morse extends Component {
         return (
             <div className='morse-container'>
                 <form onSubmit={this.handleSubmit} className='morse-form'>
-                    <label className='morse-label'>Type Something</label><br />
-                    <input className='morse-input' name='input' onChange={this.handleChange} maxLength='50'/><br />
-                    <button type='submit'>Morse It!</button>
+                    <h3 className='morse-label'>Type Something</h3>
+                    <div className='morse-input-container'>
+                        <input className='morse-input' name='input' onChange={this.handleChange} maxLength='50'/>
+                    </div>
+                    <button className='morse-button' type='submit'>Morse It!</button>
+                    <h3 className='morse-result-label'>Result</h3>
+                    <div className='morse-result-text'></div>
                 </form>
                 <h1></h1>
             </div>
